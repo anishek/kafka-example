@@ -30,7 +30,7 @@ def worker(ids=1000):
 
     for x in range(0, ids):
         msg = dict()
-        msg[n + x] = int(time.time() * 1000)
+        msg[x] = int(time.time() * 1000)
         producer.send_messages('first', json.dumps(msg))
     print 'finished: ', n
 
